@@ -1,0 +1,24 @@
+version: '3'
+services:
+  linkedin_echobox_test:
+    build: ./linkedin-echobox
+    working_dir: /linkedin-echobox
+    volumes:
+      - ./linkedin-echobox:/linkedin-echobox
+      - ~/.m2:/root/.m2
+    command: mvn clean verify
+
+  linkedin_echobox:
+    restart: always
+    build: ./linkedin-echobox
+    working_dir: /linkedin-echobox
+    volumes:
+      - ./linkedin-echobox:/linkedin-echobox
+      - ~/.m2:/root/.m2
+    expose:
+      - "8882"
+    ports:
+      - "9999:8882"
+    command: mvn clean spring-boot:run
+    depends_on:
+      - linkedin_echobox_test
