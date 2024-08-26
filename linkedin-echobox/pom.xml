@@ -23,7 +23,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<version.java>1.8</version.java>
-		<version.swagger>2.9.2</version.swagger>
+		<version.swagger>2.10.0</version.swagger>
 		<version.ebx.linkedin>1.0.3</version.ebx.linkedin>
 		<version.surefire>2.19</version.surefire>
 		<version.jacoco>0.8.3</version.jacoco>
